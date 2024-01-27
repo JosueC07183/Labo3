@@ -55,8 +55,6 @@ void setup() {
 
 }
 
-
-
 // Funcion medir voltaje
 float mide_voltaje(float mag) {
   float max_val = 0;
@@ -71,6 +69,38 @@ float mide_voltaje(float mag) {
     return max_val;
 }
 
+// Funcion encargada de indicar sobrepaso con leds
+void alarma_DC(int medida1, int medida2, int medida3, int medida4) {
+  // Primer LED
+  if(-20 > medida1 || medida1 > 20){
+    digitalWrite(LED_A3, HIGH);
+  }
+  else{
+    digitalWrite(LED_A3, LOW);
+  }
+  // Segundo LED
+  if(-20 > medida2 || medida2 > 20){
+    digitalWrite(LED_A2, HIGH);
+  }
+  else{
+    digitalWrite(LED_A2, LOW);
+  }
+  // Tercer LED
+  if(-20 > medida3 || medida3 > 20){
+    digitalWrite(LED_A1, HIGH);
+  }
+  else{
+    digitalWrite(LED_A1, LOW);
+  }
+  // Cuarto LED
+  if(-20 > medida4 || medida4 > 20){
+    digitalWrite(LED_A0, HIGH);
+  }
+  else{
+    digitalWrite(LED_A0, LOW);
+  }
+}
+
 // Loop principal donde se ejecutan las funciones del voltimetro.
 
 void loop() {
@@ -79,6 +109,9 @@ void loop() {
   float volt_3 = mide_voltaje(A3);
   float volt_4 = mide_voltaje(A2);
   display.clearDisplay();
+
+  // Revisar si algunos de los valores superaron +20V o son menores a -20V
+  alarma_DC(volt_1, volt_2, volt_3, volt_4);
 
   display.setCursor(0, 0);
   display.print("V1: ");
