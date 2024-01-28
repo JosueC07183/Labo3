@@ -1,4 +1,14 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Diagrama de bloques de ATMega328P. Tomado de \cite {web}.}}{3}{figure.1}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Diagrama de pines de ATMega328P. Tomado de \cite {web}.}}{4}{figure.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Circuito del voltímetro}}{6}{figure.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Clasificación de pines de ATMega328P. Tomado de \cite {web}.}}{4}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Amplificador inversor.}}{6}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Diseño antirebote.}}{7}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Circuito del voltímetro}}{8}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Tensión de salida a medir.}}{8}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Funcionamiento correcto de la pantalla PCD8544.}}{9}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Conexión de los LEDs al arduino.}}{10}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Canales del voltímetro.}}{10}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Diagrama de bloques general}}{11}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Diagrama de flujo función mide\_voltaje}}{12}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Daigrama de flujo alarma AC/DC.}}{13}{figure.13}%
