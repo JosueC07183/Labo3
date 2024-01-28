@@ -1,26 +1,19 @@
 \begin{thebibliography}{1}
 
 \bibitem{web}
-Atmel.
-\newblock Features attiny2313a/attiny4313.
-\newblock Atmel,
-  \url{https://ww1.microchip.com/downloads/en/DeviceDoc/doc8246.pdf}, Agosto
-  2017.
-\newblock Accedido en enero de 2024.
-
-\bibitem{web3}
-MicroJpm.
-\newblock Tienda de componentes.
-\newblock All about Circuits
-  \url{https://www.microjpm.com/search/?x=15&y=12&text=}, octubre 2017.
+Arduino UNO.
+\newblock Datasheet arduino uno.
+\newblock Arduino UNO,
+  \url{https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf},
+  julio 2014.
 \newblock Accedido en enero de 2024.
 
 \bibitem{web2}
-Mobile education and engineer.
-\newblock Decodificadores de bcd a 7 segmentos.
-\newblock Robot,
-  \url{https://wp.7robot.net/decodificadores-de-bcd-a-7-segmentos/}, abril
-  2017.
+Sparkfun.
+\newblock Datasheet pcd8544.
+\newblock SparkfunO,
+  \url{https://www.sparkfun.com/datasheets/LCD/Monochrome/Nokia5110.pdf},
+  noviembre 2008.
 \newblock Accedido en enero de 2024.
 
 \end{thebibliography}
