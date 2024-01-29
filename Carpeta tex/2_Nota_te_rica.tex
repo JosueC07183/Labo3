@@ -24,21 +24,21 @@ El diagrama de bloques de este MCU se muestra en la figura \ref{fig1}.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\linewidth]{Imagenes/1.png}
- \caption{Diagrama de bloques de ATMega328P. Tomado de \cite{web}.}
+ \caption{Diagrama de bloques de ATMega328P. Tomado de \cite{web1}.}
  \label{fig1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\linewidth]{Imagenes/2.png}
- \caption{Diagrama de pines de ATMega328P. Tomado de \cite{web}.}
+ \caption{Diagrama de pines de ATMega328P. Tomado de \cite{web1}.}
  \label{fig2}
 \end{figure}
 Dado que será necesario saber a profundidad la clasificación de estos pines la figura \ref{fig2.1} brinda una mejor clasificación de éstos.
 \begin{figure}[H]
 \centering
 \includegraphics[width=.8\linewidth]{Imagenes/2.1.png}
- \caption{Clasificación de pines de ATMega328P. Tomado de \cite{web}.}
+ \caption{Clasificación de pines de ATMega328P. Tomado de \cite{web5}.}
  \label{fig2.1}
 \end{figure}
 
@@ -54,7 +54,7 @@ La siguiente lista describe estos detalles.
 \item Temperatura en los demás pines: -\SI{0.5}{\volt} a VCC\SI{0.5}{\volt}.
 \item Corriente por pin I/O: \SI{40}{\mA}.
 \end{itemize}
-Sabiendo lo anterior, resulta pertinente mencionar la descripción de los pines usados en este laboratorio. Para la conexión de las fuentes de DC y AC, se usaron los pines \texttt{A5, A4, A3, A2}. Que se caracterizan por ser entre analógicos y digitales, esto permite tener más facilidad en cuanto a funciones. Mismo escenario para el botón de modo AC, solo que en este caso está conectado al pin \texttt{A0}. En cuanto a los pines que activan las alarmas de los LEDs y los que se conectaron a la pantalla PCD8544 se han usado los que son totalmente digitales (11-3), es decir, estos pines solo pueden funcionar como salidas o entradas, por lo que se declaron como \texttt{INPUT} o \texttt{OUTPUT}. Por último, la comunicación serial... %QUEDA PENDIENTE.
+Sabiendo lo anterior, resulta pertinente mencionar la descripción de los pines usados en este laboratorio. Para la conexión de las fuentes de DC y AC, se usaron los pines \texttt{A5, A4, A3, A2}. Que se caracterizan por ser entre analógicos y digitales, esto permite tener más facilidad en cuanto a funciones. Mismo escenario para el botón de modo AC, solo que en este caso está conectado al pin \texttt{A0}. En cuanto a los pines que activan las alarmas de los LEDs y los que se conectaron a la pantalla PCD8544 se han usado los que son totalmente digitales (11-3), es decir, estos pines solo pueden funcionar como salidas o entradas, por lo que se declaron como \texttt{INPUT} o \texttt{OUTPUT}. Por último, para la comunicación serial se usaron los pines \texttt{RX} y \texttt{TX}, ya que son los encargados de la comunicación.
 \subsection*{Periféricos utilizados}
 Algunos periféricos usados del microcontrolador así como la pantalla PCD8544 fueron los siguientes:
 \begin{itemize}
@@ -131,7 +131,7 @@ Fuente de voltaje AC/DC& 1&48.95\$\\ \hline
 El circuito que simula el voltímetro se muestra en la figura \ref{fig3}.
 \begin{figure}[H]
 \centering
-\includegraphics[width=.8\linewidth]{Imagenes/3.png}
+\includegraphics[width=.8\linewidth]{Imagenes/7.png}
  \caption{Circuito del voltímetro}
  \label{fig3}
 \end{figure}
@@ -163,9 +163,7 @@ Otro detalle, para ordenar el voltímetro se decidió usar un relay que sirve de
  \caption{Canales del voltímetro.}
  \label{fig7}
 \end{figure}
-% FINALMENTE, EL BOTON DE LA COMUNICACIÓN SERIAL....
-
-Para la comunicación serial se introduce un puerto serial encargado de realizar la comunicación entre el arduino y el puerto serial, también se hace uso de un relé para hacer cumplir con lo solicitado de que la transmisión se pueda controlar por medio de un switch, el resultado final se observa en la siguiente figura:
+Ahora, para la comunicación serial se introduce un puerto serial encargado de realizar la comunicación entre el arduino y el puerto serial, también se hace uso de un relé para hacer cumplir con lo solicitado de que la transmisión se pueda controlar por medio de un switch, el resultado final se observa en la siguiente figura:
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\linewidth]{Imagenes/8.png}
@@ -174,28 +172,4 @@ Para la comunicación serial se introduce un puerto serial encargado de realizar
 \end{figure}
 
 Es importante cuando se hace la conexión ver que se toma el RX de un puerto y se conecta con el puerto TX para que se pueda dar la comunicación como se vio en clases.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 \newpage

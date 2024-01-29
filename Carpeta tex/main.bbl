@@ -1,11 +1,19 @@
 \begin{thebibliography}{1}
 
-\bibitem{web}
-Arduino UNO.
-\newblock Datasheet arduino uno.
-\newblock Arduino UNO,
-  \url{https://docs.arduino.cc/resources/datasheets/A000066-datasheet.pdf},
-  julio 2014.
+\bibitem{web1}
+Atmel.
+\newblock Atmega328p datasheet (pdf) - atmel corporation.
+\newblock Atmel,
+  \url{https://pdf1.alldatasheet.com/datasheet-pdf/view/241077/ATMEL/ATMEGA328P.html},
+  julio 2023.
+\newblock Accedido en enero de 2024.
+
+\bibitem{web5}
+Atmel.
+\newblock 8-bit avr microcontrollers.
+\newblock Atmel,
+  \url{https://datasheet.octopart.com/ATMEGA328P-MU-Microchip-datasheet-65729177.pdf},
+  junio 2023.
 \newblock Accedido en enero de 2024.
 
 \bibitem{web2}

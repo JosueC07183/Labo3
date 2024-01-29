@@ -7,7 +7,28 @@ Luego, para realizar las medidas adecuadas se tuvo que realizar una función cap
 Esta función se compone de un ciclo \texttt{for} que va iterando los valores que poseen los 4 canales y realiza una resta de 511 (la mitad de 1023) y voltaje medido, luego se hace la escala con el producto de esta substacción y la división de 48 entre 1023, todo esto para lograr manipular voltajes de \SI{0}{\volt}-\SI{5}{\volt} con el objetivo de normalizar y escalar el valor máximo medido.\par
 La función para generar las alarmas tanto en DC como en AC son muy similares, por lo que el siguiente diagrama de bloques es equivalente para ambos.
 \input{sch4.tex}
-% AGREGAR ACÁ EL DIAGRAMA DE FLUJO PARA LA COMUNICACIÓN SERIAL.
+Hasta este punto es posible mostrar el correcto funcionamiento del voltímetro con todos sus componentes. Primero se comprueba la medición de voltajes en DC.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/9.png}
+    \caption{Medición de tensión DC de los 4 canales.}
+    \label{fig_9}
+\end{figure}
+Se puede observar que la pantalla muestra las tensiones eléctricas en DC correctamente, es decir, el voltímetro es capaz de medir cuatro canales apropiadamente. Si se deseara ver la activación de los LEDs cuando se superan los umbrales de [-20, 20] basta con cambiar esto desde las fuentes. En la figura \ref{fig_10} se demuestra el resultado esperado.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/10.png}
+    \caption{Activación de alarma de los LEDs.}
+    \label{fig_10}
+\end{figure}
+Hecho esto, ahora se muestran las pruebas con tensión eléctrica en modo AC. Para realizar esta acción, se debe presionar el botón conectado al pin \texttt{A0} para ver los siguientes resultados.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/11.png}
+    \caption{Medición de tensión AC de los 4 canales.}
+    \label{fig_11}
+\end{figure}
+De la misma manera, note que en la figura \ref{fig_11} el modo AC también posee el sistema de alarmas para cuando los LEDs están fuera de los rangos permitidos: [-14.14, 14.14].\par
 
 Para la comunicación serial se realizaron los pasos correspondientes vistos en clases, para ello primeramente se configura el script con los comando para asignar los puertos, el puerto S0 es el que realiza la comunicación con el arduino y el puerto S1 es el que se diseña para poder hacer la comunicación con el script de python y guardar los datos medidos en el archivo csv.
 Primero se intentó establecer la comunicación entre el arduino y el puerto S0, de ahí que en la imagen \ref{figk1} la dirección /tmp/ttyS0, la comprobación correcta del funcionamiento se verifica en la siguiente imagen: 
@@ -27,7 +48,27 @@ Los pasos para correr todo entonces es, primero correr el bash script, seguidame
     \caption{Verificación de la comunicación entre el puerto serial y el puerto virtual.}
     \label{figk3}
 \end{figure}
-Ya se comprobó la generación correcta de los archivos csv, con sus respectivos valores, pero si se quisiera verificar se puede correr con el mismo con los archivos encontrados en el repositorio al igual el switch usado para la transmisión serial.\\
-https://github.com/JosueC07183/Labo3.git
+Realizando unos cambios en las fuentes de alimentación, se demuestra que por consola se obtienen los resultados esperados. Haciendo la medición en DC.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/13.png}
+    \caption{Medición y comunicación serial tensión DC.}
+    \label{fig_13}
+\end{figure}
+Luego, la medición en AC.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/14.png}
+    \caption{Medición y comunicación serial tensión AC.}
+    \label{fig_14}
+\end{figure}
+Finalmente, se obtiene el archivo .csv generado a partir de la comunicación establecida.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/15.png}
+    \caption{Archivo csv generado.}
+    \label{fig_15}
+\end{figure}
 
+Ya se comprobó la generación correcta de los archivos csv, con sus respectivos valores, pero si se quisiera verificar se puede consultar el siguiente repositorio: \url{https://github.com/JosueC07183/Labo3.git} donde encontrará todos los detalles necesarios de su funcionamiento. De tal manera, que el voltímetro funciona correctamente.
 \newpage
