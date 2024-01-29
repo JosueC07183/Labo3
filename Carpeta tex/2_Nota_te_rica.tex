@@ -113,15 +113,15 @@ La siguiente tabla resume los componentes (con sus precios) utilizados para este
  \hline
 Arduino UNO&1   &17\$ \\ \hline 
 Kit de resistencias &1   &9.99\$ \\ \hline 
-Capacitancias&1   &0.2\S4 \\ \hline 
+Capacitancias&1   &0.2\$ \\ \hline 
 LEDs&4   &2.2\$ \\ \hline 
 Pantalla PCD8544&1   &5.85\$ \\ \hline 
 Botón&9   &5.85\$ \\ \hline 
 Amplificadores&4   &3.8\$ \\ \hline 
-RelaySPST & 1 & 14.50\$ \\ \hline 
+RelaySPST & 2 & 29\$ \\ \hline 
 Fuente de voltaje AC/DC& 1&48.95\$\\ \hline 
 
- \textbf{Total}& &  \\
+ \textbf{Total}& &  122.84\\
  \hline
 \end{tabular}
 \end{center}
@@ -165,7 +165,15 @@ Otro detalle, para ordenar el voltímetro se decidió usar un relay que sirve de
 \end{figure}
 % FINALMENTE, EL BOTON DE LA COMUNICACIÓN SERIAL....
 
+Para la comunicación serial se introduce un puerto serial encargado de realizar la comunicación entre el arduino y el puerto serial, también se hace uso de un relé para hacer cumplir con lo solicitado de que la transmisión se pueda controlar por medio de un switch, el resultado final se observa en la siguiente figura:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{Imagenes/8.png}
+    \caption{Introducción del puerto serial y el switch para realizar la comunicación.}
+    \label{figk1}
+\end{figure}
 
+Es importante cuando se hace la conexión ver que se toma el RX de un puerto y se conecta con el puerto TX para que se pueda dar la comunicación como se vio en clases.
 
 
 
